@@ -1,24 +1,15 @@
-# README
+# Rails Blogger Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
+This project is intended to be a trial run of programming in Ruby on Rails for me and for communicating with another service through their API.
 
-Things you may want to cover:
+My current requirements are:
+* Connect to the Blogger API
+* Pull down the published blogs at regular intervals
+* Display them nicely.
 
-* Ruby version
+I will update this list of requirements as I work my way through the project (and that statement will test my ability to maintain documentation).
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Version Information
+Ruby: 2.5.1
+Rails: 5.2
