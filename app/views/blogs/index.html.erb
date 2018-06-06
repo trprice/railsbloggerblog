@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Blogs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Kind</th>
+      <th>Blog</th>
+      <th>Description</th>
+      <th>Publisheddate</th>
+      <th>Updatedate</th>
+      <th>Url</th>
+      <th>Selflink</th>
+      <th>Poststotalitems</th>
+      <th>Postsselflink</th>
+      <th>Pagestotalitems</th>
+      <th>Pagesselflink</th>
+      <th>Localelanguage</th>
+      <th>Localecountry</th>
+      <th>Localevariant</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @blogs.each do |blog| %>
+      <tr>
+        <td><%= blog.kind %></td>
+        <td><%= blog.blog_id %></td>
+        <td><%= blog.description %></td>
+        <td><%= blog.publishedDate %></td>
+        <td><%= blog.updateDate %></td>
+        <td><%= blog.url %></td>
+        <td><%= blog.selfLink %></td>
+        <td><%= blog.postsTotalItems %></td>
+        <td><%= blog.postsSelfLink %></td>
+        <td><%= blog.pagesTotalItems %></td>
+        <td><%= blog.pagesSelfLink %></td>
+        <td><%= blog.localeLanguage %></td>
+        <td><%= blog.localeCountry %></td>
+        <td><%= blog.localeVariant %></td>
+        <td><%= link_to 'Show', blog %></td>
+        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
+        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Blog', new_blog_path %>

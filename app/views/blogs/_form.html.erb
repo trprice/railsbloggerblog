@@ -1,0 +1,87 @@
+<%= form_with(model: blog, local: true) do |form| %>
+  <% if blog.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
+
+      <ul>
+      <% blog.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :kind %>
+    <%= form.text_field :kind %>
+  </div>
+
+  <div class="field">
+    <%= form.label :blog_id %>
+    <%= form.number_field :blog_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :publishedDate %>
+    <%= form.datetime_select :publishedDate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :updateDate %>
+    <%= form.datetime_select :updateDate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :url %>
+    <%= form.text_field :url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :selfLink %>
+    <%= form.text_field :selfLink %>
+  </div>
+
+  <div class="field">
+    <%= form.label :postsTotalItems %>
+    <%= form.number_field :postsTotalItems %>
+  </div>
+
+  <div class="field">
+    <%= form.label :postsSelfLink %>
+    <%= form.text_field :postsSelfLink %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pagesTotalItems %>
+    <%= form.number_field :pagesTotalItems %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pagesSelfLink %>
+    <%= form.text_field :pagesSelfLink %>
+  </div>
+
+  <div class="field">
+    <%= form.label :localeLanguage %>
+    <%= form.text_field :localeLanguage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :localeCountry %>
+    <%= form.text_field :localeCountry %>
+  </div>
+
+  <div class="field">
+    <%= form.label :localeVariant %>
+    <%= form.text_field :localeVariant %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

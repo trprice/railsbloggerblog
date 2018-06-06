@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  kind: MyString
+  blog_id: 1
+  description: MyString
+  publishedDate: 2018-06-05 21:22:25
+  updateDate: 2018-06-05 21:22:25
+  url: MyString
+  selfLink: MyString
+  postsTotalItems: 1
+  postsSelfLink: MyString
+  pagesTotalItems: 1
+  pagesSelfLink: MyString
+  localeLanguage: MyString
+  localeCountry: MyString
+  localeVariant: MyString
+
+two:
+  kind: MyString
+  blog_id: 1
+  description: MyString
+  publishedDate: 2018-06-05 21:22:25
+  updateDate: 2018-06-05 21:22:25
+  url: MyString
+  selfLink: MyString
+  postsTotalItems: 1
+  postsSelfLink: MyString
+  pagesTotalItems: 1
+  pagesSelfLink: MyString
+  localeLanguage: MyString
+  localeCountry: MyString
+  localeVariant: MyString

@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Kind:</strong>
+  <%= @blog.kind %>
+</p>
+
+<p>
+  <strong>Blog:</strong>
+  <%= @blog.blog_id %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @blog.description %>
+</p>
+
+<p>
+  <strong>Publisheddate:</strong>
+  <%= @blog.publishedDate %>
+</p>
+
+<p>
+  <strong>Updatedate:</strong>
+  <%= @blog.updateDate %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @blog.url %>
+</p>
+
+<p>
+  <strong>Selflink:</strong>
+  <%= @blog.selfLink %>
+</p>
+
+<p>
+  <strong>Poststotalitems:</strong>
+  <%= @blog.postsTotalItems %>
+</p>
+
+<p>
+  <strong>Postsselflink:</strong>
+  <%= @blog.postsSelfLink %>
+</p>
+
+<p>
+  <strong>Pagestotalitems:</strong>
+  <%= @blog.pagesTotalItems %>
+</p>
+
+<p>
+  <strong>Pagesselflink:</strong>
+  <%= @blog.pagesSelfLink %>
+</p>
+
+<p>
+  <strong>Localelanguage:</strong>
+  <%= @blog.localeLanguage %>
+</p>
+
+<p>
+  <strong>Localecountry:</strong>
+  <%= @blog.localeCountry %>
+</p>
+
+<p>
+  <strong>Localevariant:</strong>
+  <%= @blog.localeVariant %>
+</p>
+
+<%= link_to 'Edit', edit_blog_path(@blog) %> |
+<%= link_to 'Back', blogs_path %>
