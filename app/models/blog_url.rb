@@ -1,0 +1,2 @@
+class BlogUrl < ApplicationRecord
+end
