@@ -14,7 +14,6 @@ class BlogUrlsTest < ApplicationSystemTestCase
     visit blog_urls_url
     click_on "New Blog Url"
 
-    fill_in "Blog", with: @blog_url.blog_id
     fill_in "Url", with: @blog_url.url
     click_on "Create Blog url"
 
@@ -26,7 +25,6 @@ class BlogUrlsTest < ApplicationSystemTestCase
     visit blog_urls_url
     click_on "Edit", match: :first
 
-    fill_in "Blog", with: @blog_url.blog_id
     fill_in "Url", with: @blog_url.url
     click_on "Update Blog url"
 

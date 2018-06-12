@@ -17,7 +17,7 @@ class BlogUrlsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create blog_url" do
     assert_difference('BlogUrl.count') do
-      post blog_urls_url, params: { blog_url: { blog_id: @blog_url.blog_id, url: @blog_url.url } }
+      post blog_urls_url, params: { blog_url: { url: @blog_url.url } }
     end
 
     assert_redirected_to blog_url_url(BlogUrl.last)
