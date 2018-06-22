@@ -10,6 +10,10 @@ module BlogUrlsHelper
 		service.key = ENV["GOOGLE_API_KEY"]
 
 		returned_blog = service.get_blog_by_url(url.url)
+
+    blog = Blog.from_blogger(returned_blog)
+
+    # Set the blog id into the current object then save
   end
 end
 
