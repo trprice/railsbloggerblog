@@ -1,20 +1,14 @@
 # Info about the blogger api can be seen in the service.rb file here:
-# https://github.com/google/google-api-ruby-client/blob/master/generated/google/apis/blogger_v3/service.rb
-require 'google/apis/blogger_v3'
-
 module BlogUrlsHelper
-  def get_blogger_by_url(url)
-    Blogger = Google::Apis::BloggerV3 # Alias the module
-    service = Blogger::BloggerService.new
+  def self.get_blog(url)
+    b_url = BlogUrl.new
+    b_url.url = url
 
-		service.key = ENV["GOOGLE_API_KEY"]
+    blog = BlogsHelper.get_blogger_by_url(url)
+    b_url.blog_id = blog.blog_id
 
-		returned_blog = service.get_blog_by_url(url.url)
+    b_url.save
 
-    blog = Blog.from_blogger(returned_blog)
-
-    # Set the blog id into the current object then save
+    return b_url
   end
 end
-
-# Implement a data mapping module to map between the Google::Apis::BloggerV3::Blog and the Blog model
