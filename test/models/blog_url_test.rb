@@ -15,10 +15,10 @@ class BlogUrlTest < ActiveSupport::TestCase
 
   test "Should get blog id from the blog object pulled from Blogger" do
     blog_url = BlogUrl.new
-    blog_url.url = "https://taylortests.blogspot.com"
+    url = "https://taylortests.blogspot.com"
    
-    blog = BlogsHelper.get_blogger_by_url(blog_url.url)
-    blog_url = BlogUrlsHelper.get_blog(blog_url.url)
+    blog = BlogsHelper.get_blogger_by_url(url)
+    BlogUrlsHelper.get_blog(blog_url, url)
 
     # This is a relatively silly test because it the actual helper sets
     # this exact value and so, if this doesn't work, there's something

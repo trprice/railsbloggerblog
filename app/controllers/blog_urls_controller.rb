@@ -25,10 +25,7 @@ class BlogUrlsController < ApplicationController
   # POST /blog_urls.json
   def create
     @blog_url = BlogUrl.new(blog_url_params)
-    @blog_url.url = blog_url_params[:url]
-
-    blog = BlogsHelper.get_blogger_by_url(@blog_url.url)
-    @blog_url.blog_id = blog.blog_id
+    BlogUrlsHelper.get_blog(@blog_url, blog_url_params[:url])
 
     respond_to do |format|
       if @blog_url.save
